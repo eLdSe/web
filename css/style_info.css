@@ -263,7 +263,14 @@ footer a:hover {
         gap: 20px;
     }
 }
-
+@media (max-width: 768px) {
+    ul {
+        flex-wrap: wrap;
+    }
+    ul a {
+        margin: 5px 10px;
+    }
+}
 /* Основные стили секции с инструментами */
 #tools {
     background: linear-gradient(to bottom, #e3f2fd, #bbdefb);
