@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS'e Giriş</title>
+    <link rel="stylesheet" href="css/style_c.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-paint-brush"></i> CSS (Cascading Style Sheets)</h1>
+    </header>
+    <nav>
+        <a href="#what-is-css">CSS Nedir?</a>
+        <a href="#features">Özellikler</a>
+        <a href="#example">Örnek</a>
+        <a href="#tutorial-video">Video</a>
+    </nav>
+    <main>
+        <section id="what-is-css">
+            <h2>CSS Nedir?</h2>
+            <p>CSS, Cascading Style Sheets'in kısaltmasıdır. Web sayfalarının stilini ve düzenini tanımlamak için kullanılan bir dildir. CSS, HTML ile birlikte çalışarak web sayfalarının görünümünü düzenler ve daha estetik bir tasarım sağlar.</p>
+            <div class="highlight">
+                <h3>CSS'in Tarihçesi</h3>
+                <p>CSS, 1996 yılında W3C tarafından standartlaştırıldı. İlk sürümünden bu yana gelişerek CSS2 ve CSS3'e ulaştı. CSS3, web tasarımında devrim yaratan birçok yeni özellik ekledi.</p>
+            </div>
+        </section>
+
+        <section id="features">
+            <h2><i class="fas fa-list"></i> CSS Özellikleri</h2>
+            <ul>
+                <li>Web sayfası tasarımını özelleştirir</li>
+                <li>Renk, yazı tipi, arka plan ve düzen gibi görsel özellikleri tanımlar</li>
+                <li>Responsive (duyarlı) tasarım sağlar</li>
+                <li>HTML ve JavaScript ile sorunsuz çalışır</li>
+                <li>Hızlı yükleme için dış stil dosyaları oluşturur</li>
+                <li>Animasyon ve geçiş efektlerini destekler</li>
+            </ul>
+        </section>
+
+        <section id="example">
+            <h2><i class="fas fa-code"></i> CSS Örneği</h2>
+            <p>Aşağıda temel bir CSS kullanım örneği bulunmaktadır:</p>
+            <pre class="code-example"><code>
+/* CSS Dosyası: style.css */
+body {
+    background-color: #f4f4f4; 
+    color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    color: #2196F3;
+    text-align: center;
+}
+            </code></pre>
+        </section>
+
+        <section id="tutorial-video">
+            <h2><i class="fas fa-video"></i> CSS Öğrenme Videosu</h2>
+            <div style="position: relative; padding-bottom: 35%; height: 0; overflow: hidden; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);">
+                <iframe 
+                    src="https://www.youtube.com/embed/g_KbvgJOPvg" 
+                    title="JavaScript Öğrenme Videosu" 
+                    frameborder="0" 
+                    allowfullscreen 
+                    style="position: absolute; top: 0; left: 0; width: 80%; height: 100%; margin: 0 10%;">
+                </iframe>
+            </div>            
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 CSS | <a href="index.html">Geri Dön</a></p>
+    </footer>
+    <script>
+        // Отслеживаем прокрутку страницы и подсвечиваем соответствующую ссылку
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const links = document.querySelectorAll('nav a');
+
+            sections.forEach((section, index) => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+                    links.forEach(link => link.classList.remove('active'));
+                    links[index].classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

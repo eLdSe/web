@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML'e Giriş</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_h.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-code"></i> HTML (HyperText Markup Language)</h1>
+    </header>
+    <nav>
+        <a href="#what-is-html">HTML Nedir?</a>
+        <a href="#features">Özellikler</a>
+        <a href="#example">Örnek</a>
+        <a href="#tutorial-video">Video</a>
+    </nav>
+    <main>
+        <section id="what-is-html">
+            <h2>HTML Nedir?</h2>
+            <p>HTML, web sayfalarının iskeletini oluşturan bir işaretleme dilidir. İnternet üzerindeki tüm web siteleri, HTML kullanılarak yapılandırılır.</p>
+            <div class="highlight">
+                <h3>HTML'in Tarihçesi</h3>
+                <p>HTML, 1990 yılında Tim Berners-Lee tarafından geliştirilmiştir. İlk versiyonu oldukça basit olan HTML, günümüzde sürekli gelişerek modern web uygulamalarının temelini oluşturuyor.</p>
+            </div>
+        </section>
+
+        <section id="features">
+            <h2><i class="fas fa-list"></i> HTML Özellikleri</h2>
+            <ul>
+                <li>Web sayfalarının yapısını oluşturur</li>
+                <li>Metin, görseller, videolar ve diğer içerikleri destekler</li>
+                <li>Çeşitli tarayıcılarla uyumludur</li>
+                <li>Bağlantılar ve formlar gibi etkileşimli öğeler sunar</li>
+                <li>CSS ve JavaScript ile entegre çalışabilir</li>
+                <li>Hızlı ve kolay öğrenilebilir</li>
+            </ul>
+        </section>
+
+        <section id="example">
+            <h2><i class="fas fa-code"></i> HTML Örneği</h2>
+            <p>Aşağıda temel bir HTML kullanım örneği bulunmaktadır:</p>
+            <pre class="code-example"><code>
+<!-- Basit bir HTML sayfa yapısı -->
+&lt;!DOCTYPE html&gt;<br>
+&lt;html&gt;<br>
+&nbsp;&nbsp;&lt;head&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Merhaba Dünya&lt;/title&gt;<br>
+&nbsp;&nbsp;&lt;/head&gt;<br>
+&nbsp;&nbsp;&lt;body&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Merhaba Dünya!&lt;/h1&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Bu bir HTML örneğidir.&lt;/p&gt;<br>
+&nbsp;&nbsp;&lt;/body&gt;<br>
+&lt;/html&gt;
+            </code></pre>
+        </section>
+
+        <section id="tutorial-video">
+            <h2><i class="fas fa-video"></i> HTML Öğrenme Videosu</h2>
+            <div style="position: relative; padding-bottom: 35%; height: 0; overflow: hidden; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);">
+                <iframe 
+                    src="https://www.youtube.com/embed/r9_7EQLINzw" 
+                    title="JavaScript Öğrenme Videosu" 
+                    frameborder="0" 
+                    allowfullscreen 
+                    style="position: absolute; top: 0; left: 0; width: 80%; height: 100%; margin: 0 10%;">
+                </iframe>
+            </div>            
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 HTML | <a href="index.html">Geri Dön</a></p>
+    </footer>
+    <script>
+        // Sayfa bölümleri arasında gezinme için aktif bağlantıyı vurgulama
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const links = document.querySelectorAll('nav a');
+
+            sections.forEach((section, index) => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+                    links.forEach(link => link.classList.remove('active'));
+                    links[index].classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
