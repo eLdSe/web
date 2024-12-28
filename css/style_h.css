@@ -13,6 +13,19 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 0 0 15px 15px;
 }
+@media (max-width: 768px) {
+    header {
+        padding: 10px 5px; /* Уменьшаем внутренние отступы */
+    }
+
+    header h1 {
+        font-size: 1.5rem; /* Уменьшаем размер текста */
+    }
+
+    header h1 i {
+        font-size: 1rem; /* Уменьшаем размер иконки */
+    }
+}
 nav {
     display: flex;
     justify-content: center;
@@ -69,12 +82,17 @@ footer {
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 15px 15px 0 0;
 }
+/* Адаптивные стили для уменьшения навбара на маленьких экранах */
 @media (max-width: 768px) {
     nav {
-        flex-wrap: wrap;
+        flex-wrap: wrap; /* Элементы будут переноситься */
+        padding: 5px; /* Уменьшаем отступы */
     }
+
     nav a {
-        margin: 5px 10px;
+        margin: 5px; /* Уменьшаем расстояние между ссылками */
+        padding: 5px 8px; /* Делаем ссылки компактнее */
+        font-size: 0.8rem; /* Уменьшаем размер текста */
     }
 }
 html {
