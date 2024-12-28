@@ -149,14 +149,43 @@ footer a:hover {
 .button:hover {
     background-color: #1565c0;
 }
+
+/* Гамбургер и скрытие меню на маленьких экранах */
+nav .hamburger {
+    display: none;  /* Скрываем кнопку по умолчанию */
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Медиазапрос для экранов шириной 768px и меньше */
 @media (max-width: 768px) {
-    nav {
-        flex-wrap: wrap;
+    nav .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(51, 51, 51, 0.9);
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        padding: 10px;
+        border-radius: 8px;
     }
-    nav a {
-        margin: 5px 10px;
+
+    nav .nav-links a {
+        margin: 10px 0;
+    }
+
+    nav .hamburger {
+        display: block; /* Показываем кнопку на мобильных устройствах */
+    }
+
+    nav .nav-links.active {
+        display: flex;
     }
 }
+
 #technologies{
     background: linear-gradient(to bottom, #e3f2fd, #bbdefb);
     border: 1px solid #90caf9;
@@ -266,6 +295,7 @@ footer a:hover {
         margin: 5px 10px;
     }
 }
+
 /* Основные стили секции с инструментами */
 #tools {
     background: linear-gradient(to bottom, #e3f2fd, #bbdefb);
@@ -390,5 +420,3 @@ footer a:hover {
     opacity: 1;
     transform: translateY(0);
 }
-
-/* Стилизация кнопок внутри блоков информации (например, кнопка "Back") */
