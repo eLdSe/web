@@ -9,13 +9,16 @@
 <body>
     <nav>
         <h1 onclick="window.location.href='#';">Web Geliştirmeye Giriş</h1>
-        <a href="#introduction">Giriş</a>
-        <a href="#technologies">Teknolojiler</a>
-        <a href="#stages">Aşamalar</a>
-        <a href="#languages">Diller</a>
-        <a href="#tools">Araçlar</a>
-        <a href="login.html">login</a>
-    </nav>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <div class="nav-links">
+            <a href="#introduction">Giriş</a>
+            <a href="#technologies">Teknolojiler</a>
+            <a href="#stages">Aşamalar</a>
+            <a href="#languages">Diller</a>
+            <a href="#tools">Araçlar</a>
+            <a href="login.html">Login</a>
+        </div>
+    </nav>    
     <section id="introduction">
         <h2>1. Web Geliştirmeye Giriş</h2>
         <p>Web geliştirme, web sitelerinin oluşturulması ve bakımı ile ilgilidir. Front-end geliştirme (kullanıcı arayüzü), back-end geliştirme (sunucu tarafı) ve full-stack geliştirme (her ikisi de) dahil olmak üzere bu alanları içerir. Bu alanları anlamak, modern, dinamik ve etkileşimli web siteleri oluşturmak için çok önemlidir.</p>
@@ -153,6 +156,12 @@
                 selectedInfo.style.display = 'none'; // Bilgi bloğunu gizle
             }
         }    
+
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
     </script>
 </body>
 </html>
