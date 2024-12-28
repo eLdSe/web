@@ -33,11 +33,6 @@ nav {
         padding: 0 1rem;
         transition: background 0.3s, transform 0.3s;   
     }
-    h1:hover{    
-        background: #1565c0;
-        transform: scale(1.1);
-        border-radius: 5px;
-    }
 }
 nav a {
     color: #bbdefb;
