@@ -318,7 +318,8 @@ footer a:hover {
 /* Основные стили секции с инструментами */
 #tools {
     background: linear-gradient(to bottom, #e3f2fd, #bbdefb);
-    padding: 40px 0;
+    border: 1px solid #90caf9;
+    box-shadow: 0 4px 8px rgba(33, 150, 243, 0.2);
     margin-top: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -338,7 +339,7 @@ footer a:hover {
         background-color: #0056b3;
     }
     h2 {   
-        text-align: center;
+        text-align: left;
         font-size: 2rem;
         color: #0d47a1;
         background: #bbdefb;
@@ -373,7 +374,12 @@ footer a:hover {
     color: #0056b3;
     transform: scale(1.05);
 }
-
+@media (max-width: 768px) {
+    h2{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
 .tool-info {
     display: none;
     background-color: #ffffff;
@@ -450,23 +456,8 @@ footer a:hover {
     #tools ul li {
         margin: 15px;
     }
-}
-@media (max-width: 768px) {
-    .tool-info {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+    #tools h2{
+        font-size: 1.5rem;
+        text-align: center;
     }
-    .tool-info h3 {
-        font-size: 1.5em;
-        
-    }
-    .tool-info p {
-        font-size: 1em;
-    }
-    .tool-info .btn-link {
-        font-size: 1em;
-        margin: 15px;
-    }   
-    
 }
