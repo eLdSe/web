@@ -17,13 +17,13 @@
         <a href="login.html">Login</a>
     </nav>    
     <section id="introduction">
-        <h2>1. Web Geliştirmeye Giriş</h2>
+        <h2>Web Geliştirmeye Giriş</h2>
         <p>Web geliştirme, web sitelerinin oluşturulması ve bakımı ile ilgilidir. Front-end geliştirme (kullanıcı arayüzü), back-end geliştirme (sunucu tarafı) ve full-stack geliştirme (her ikisi de) dahil olmak üzere bu alanları içerir. Bu alanları anlamak, modern, dinamik ve etkileşimli web siteleri oluşturmak için çok önemlidir.</p>
         <p>Front-end geliştirme, HTML, CSS ve JavaScript gibi teknolojiler kullanarak görsel olarak çekici kullanıcı arayüzlerinin oluşturulmasına odaklanır. Bu teknolojiler, bir web sitesinin cihazlar arasında erişilebilir ve duyarlı olmasını sağlar. Back-end geliştirme ise sunucu tarafı programlaması, veritabanları ve sunucu yapılandırmaları ile ilgilidir. Full-stack geliştiriciler, ön ve arka uç becerilerini birleştirerek kapsamlı çözümler oluştururlar.</p>
         <p>Son yıllarda, web geliştirme önemli bir beceri haline gelmiştir ve e-ticaret, eğitim ve eğlence gibi birçok sektörde uygulamaları vardır. Kullanıcı dostu web siteleri oluşturma yeteneği, işletme büyümesi ve kullanıcı memnuniyeti üzerinde önemli bir etkiye sahiptir.</p>
     </section>
     <section id="technologies">
-        <h2>2. Temel Teknolojiler</h2>
+        <h2>Temel Teknolojiler</h2>
         <h3>Front-End Geliştirme</h3>
         <p>Front-end geliştirme, bir web sitesinin kullanıcı arayüzünü (UI) oluşturmayı ve çeşitli cihazlar ve ekran boyutlarında iyi görünmesini sağlamayı içerir.</p>
         <h4>HTML (HyperText Markup Language)</h4>
@@ -53,7 +53,7 @@
         <p>Popüler Back-End Çerçeveleri: Django, Flask, Express.js, Ruby on Rails</p>
     </section>
     <section id="stages">
-        <h2>3. Web Geliştirmenin Aşamaları</h2>
+        <h2>Web Geliştirmenin Aşamaları</h2>
         <ol>
             <li><strong>Planlama:</strong> Hedefler ve hedef kitle belirlenir, yapı oluşturulur.</li>
             <li><strong>Tasarım:</strong> Figma gibi araçlarla telif hakkı ve prototipler oluşturulur.</li>
@@ -66,15 +66,25 @@
         <h2>Programlama Dilleri</h2>
         <ul>
             <div class="html_block">
-                <a href="HTML.html" class="links class"><strong>HTML:</strong> Web sayfalarının yapısı.</a>
+                <button onclick="location.href='HTML.html'" class="btn">
+                    <span class="btn-title">HTML</span>
+                    <span class="btn-description">Web sayfalarının yapısı.</span>
+                </button>
             </div>
             <div class="css_block">
-                <a href="css_info.html" class="links"><strong>CSS:</strong> Web sayfaları için stil.</a>
+                <button onclick="location.href='css_info.html'" class="btn">
+                    <span class="btn-title">CSS</span>
+                    <span class="btn-description">Web sayfaları için stil.</span>
+                </button>
             </div>
             <div class="javascript_block">
-                <a href="javacript.html" class="links"><strong>JavaScript:</strong> Web sitelerine etkileşim ekler.</a>
+                <button onclick="location.href='javacript.html'" class="btn">
+                    <span class="btn-title">JavaScript</span>
+                    <span class="btn-description">Web sitelerine etkileşim ekler.</span>
+                </button>
+            </div>
         </ul>
-    </section>   
+    </section>    
     <section id="tools">
         <h2>Popüler Araçlar</h2>
         <ul>
@@ -115,7 +125,6 @@
     </section>     
     <section>
         <div class="info_video">
-
         </div>
     </section>
     <footer>
@@ -146,19 +155,12 @@
                 selectedInfo.style.display = 'block'; // Seçili bloğu göster
             }
         }
-
         function hideInfo(id) {
             const selectedInfo = document.getElementById(id);
             if (selectedInfo) {
                 selectedInfo.style.display = 'none'; // Bilgi bloğunu gizle
             }
         }    
-
-        function toggleMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('active');
-        }
-
     </script>
 </body>
 </html>
