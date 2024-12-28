@@ -61,9 +61,6 @@ section {
     transition: transform 0.3s ease;
     overflow: hidden;
 }
-section:hover {
-    transform: translateY(-5px);
-}
 section h2 {
     max-width: 1100px;
     margin: 3rem auto;
@@ -156,6 +153,7 @@ footer a:hover {
     nav {
         flex-wrap: wrap; /* Элементы переносятся на новую строку */
         padding: 8px 10px;
+        
     }
 
     nav h1 {
@@ -164,7 +162,6 @@ footer a:hover {
         width: 100%; /* Заголовок занимает всю ширину */
         text-align: center; /* Центрируем текст */
     }
-
     nav a {
         font-size: 0.9rem; /* Уменьшаем размер шрифта ссылок ещё больше */
         margin: 3px 5px; /* Уменьшаем отступы между ссылками */
@@ -214,10 +211,18 @@ footer a:hover {
         border-radius: 3px;
     }
 }   
+/* Общие стили для секции */
+.Programming_languages {
+    background: linear-gradient(to bottom, #e3f2fd, #bbdefb);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
 
 .Programming_languages h2 {
     background: linear-gradient(to bottom, #e3f2fd, #bbdefb);
-    text-align: center;
+    text-align: left;
     font-size: 2rem;
     color: #0d47a1;
     background: #bbdefb;
@@ -226,57 +231,87 @@ footer a:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Стиль для каждого блока с языком программирования */
-.html_block, .css_block, .javascript_block {
-    background-color: #333;
-    width: 500px;
-    padding: 20px;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-    cursor: pointer;
+/* Стили для списка */
+.Programming_languages ul {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.html_block:hover, .css_block:hover, .javascript_block:hover, .php_python_block:hover {
+/* Блоки для кнопок */
+.html_block, .css_block, .javascript_block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 200px;
+}
+
+/* Общие стили для кнопок */
+.btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #1e88e5, #1565c0);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #1565c0, #0d47a1);
     transform: scale(1.05);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Стили для ссылок внутри блока */
-.html_block a, .css_block a, .javascript_block a, .php_python_block a {
-    color: #fff;
-    font-size: 1.2em;
-    text-decoration: none;
+/* Заголовок кнопки */
+.btn-title {
+    font-size: 1.2rem;
     font-weight: bold;
-    transition: color 0.3s ease;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    color: #ffeb3b;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-.html_block a:hover, .css_block a:hover, .javascript_block a:hover, .php_python_block a:hover {
-    color: #007BFF;
+/* Описание кнопки */
+.btn-description {
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: #bbdefb;
+    line-height: 1.4;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-.Programming_languages{
-    background: linear-gradient(to bottom, #e3f2fd, #bbdefb);
-    color: #fff;
-    padding: 40px;
-    border-radius: 10px;
-    ul{
-        display: flex;
-        justify-content: space-around;
-        gap: 20px;
-    }
-}
+/* Адаптивные стили */
 @media (max-width: 768px) {
-    ul {
-        flex-wrap: wrap;
+    .Programming_languages ul {
+        gap: 10px;
     }
-    ul a {
-        margin: 5px 10px;
+
+    .btn {
+        width: 150px;
+        padding: 10px;
+    }
+
+    .btn-title {
+        font-size: 1rem;
+    }
+
+    .btn-description {
+        font-size: 0.8rem;
     }
 }
 
@@ -403,4 +438,35 @@ footer a:hover {
 .tool-info[style*="display: block"] {
     opacity: 1;
     transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    #tools ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #tools ul li {
+        margin: 15px;
+    }
+}
+@media (max-width: 768px) {
+    .tool-info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .tool-info h3 {
+        font-size: 1.5em;
+        
+    }
+    .tool-info p {
+        font-size: 1em;
+    }
+    .tool-info .btn-link {
+        font-size: 1em;
+        margin: 15px;
+    }   
+    
 }
