@@ -21,6 +21,7 @@ nav {
     background: #1976d2;
     display: flex;
     justify-content: center;
+    align-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 100%; /* Растягиваем меню на всю ширину */
     z-index: 1000; /* Убираем перекрытия с другими элементами */
@@ -33,11 +34,6 @@ nav {
         padding: 0 1rem;
         transition: background 0.3s, transform 0.3s;   
     }
-}
-.nav-links{
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 nav a {
     color: #bbdefb;
@@ -155,42 +151,25 @@ footer a:hover {
     background-color: #1565c0;
 }
 
-/* Гамбургер и скрытие меню на маленьких экранах */
-nav .hamburger {
-    display: none;  /* Скрываем кнопку по умолчанию */
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-/* Медиазапрос для экранов шириной 768px и меньше */
+/* Адаптивные стили для маленьких экранов */
 @media (max-width: 768px) {
-    nav .nav-links {
-        display: none;
-        flex-direction: column;
-        background-color: rgba(51, 51, 51, 0.9);
-        position: absolute;
-        top: 50px;
-        right: 20px;
-        padding: 10px;
-        border-radius: 8px;
+    nav {
+        flex-wrap: wrap; /* Элементы переносятся на новую строку */
+        padding: 8px 10px;
     }
 
-    nav .nav-links a {
-        margin: 10px 0;
+    nav h1 {
+        font-size: 1.1rem; /* Ещё меньше размер заголовка */
+        margin-bottom: 8px; /* Отступ снизу */
+        width: 100%; /* Заголовок занимает всю ширину */
+        text-align: center; /* Центрируем текст */
     }
 
-    nav .hamburger {
-        display: block; /* Показываем кнопку на мобильных устройствах */
-    }
-
-    nav .nav-links.active {
-        display: flex;
+    nav a {
+        font-size: 0.9rem; /* Уменьшаем размер шрифта ссылок ещё больше */
+        margin: 3px 5px; /* Уменьшаем отступы между ссылками */
     }
 }
-
 #technologies{
     background: linear-gradient(to bottom, #e3f2fd, #bbdefb);
     border: 1px solid #90caf9;
