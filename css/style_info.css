@@ -34,6 +34,11 @@ nav {
         transition: background 0.3s, transform 0.3s;   
     }
 }
+.nav-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 nav a {
     color: #bbdefb;
     text-decoration: none;
